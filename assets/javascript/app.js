@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var term = ["Skunk", "test"];
+  var term = [];
 
   function createURL() {
     queryURL = `https://api.giphy.com/v1/gifs/search?`
@@ -20,31 +20,35 @@ $(document).ready(function () {
   }
 
   function renderButtons() {
-
-    var userInput = $("#term").val();
-    console.log(userInput)
-
     $("#buttons").empty();
 
+    for (var i = 0; i < term.length; i++) {
+      $("#buttons").append(`<button>${term[i]}</button>`)
+    }
 
 
-    term.push(userInput);
-
-    $("#buttons").append(`<button>${userInput}</button>`);
   }
 
 
   $("#submit").on("click", function () {
     event.preventDefault();
+    var userInput = $("#term").val();
+    if (userInput === "") {
+      return false;
+    }
+    term.push(userInput);
+
     // $.ajax({
     //   url: queryURL,
     //   method: "GET"
     // }).then(function (response) {
     //   console.log(response)
     renderButtons();
-
+    $("#term").val("");
     // });
   });
+  renderButtons();
+
   createURL();
 
 
