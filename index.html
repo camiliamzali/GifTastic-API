@@ -15,15 +15,30 @@
   <header class="jumbotron" id="buttons">
 
   </header>
-  <main class="container">
-    <div class="flex-column">
-      <label class="row">Add an animal</label>
-      <input class="row" type="text" id="term"></input>
-      <button class="row" type="submit" id="submit">Submit</button>
+  <div class="container-fluid">
+    <div class="row">
+      <main class="container col-md-9">
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-header display-4 bg-dark text-light">
+              Gifs Here!
+            </div>
+            <div class="card-body">
+              <span id="gifs"></span>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <aside class="container-fluid flex-column text-center col-md-3">
+        <h3>Add an animal</h3>
+        <form class="input-group" id="form">
+          <input class="form-control text-capitalize" type="text" id="term"></input>
+          <button class="btn btn-dark text-light btn-block mt-1" type="submit" id="submit">Submit</button>
+        </form>
+      </aside>
     </div>
-
-  </main>
-
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
