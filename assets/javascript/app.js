@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var term = [];
+  var term = ["Cat", "Dog", "Horse", "Cow"];
 
 
   function displayAnimalGifs() {
