@@ -25,7 +25,7 @@ $(document).ready(function () {
         var gifImage = $(`<img class="col">`);
 
         gifImage.attr({
-          "src": gifURL,
+          "src": results[i].images.fixed_height_still.url,
           "data-still": results[i].images.fixed_height_still.url,
           "data-animate": gifURL,
           "data-state": "animate"
@@ -79,7 +79,8 @@ $(document).ready(function () {
 
   $(document).on("click", ".gif-button", displayAnimalGifs);
 
-  $("img").on("click", function () {
+  $("#gifs").on("click", "img", function () {
+    console.log("hi")
     var state = $(this).attr("data-state");
 
     if (state === "still") {
