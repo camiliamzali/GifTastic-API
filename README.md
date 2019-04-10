@@ -1,9 +1,9 @@
 # GifTastic-API
 
-# Description
+## Description
 This app allows you to click pre-set animal buttons to append gifs to the container. The user can write in their own animals.
 
-# Technologies
+## Technologies
 * HTML
 * CSS
 * Bootstrap
