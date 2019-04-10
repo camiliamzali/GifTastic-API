@@ -22,7 +22,7 @@ $(document).ready(function () {
 
         var gifURL = results[i].images.fixed_height.url;
 
-        var gifImage = $(`<img class="col-md-6">`);
+        var gifImage = $(`<img class="col">`);
 
         gifImage.attr({
           "src": gifURL,
